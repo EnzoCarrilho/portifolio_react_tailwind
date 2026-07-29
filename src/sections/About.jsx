@@ -1,4 +1,4 @@
-import { Code2, Rocket } from "lucide-react"
+import { Code2, Lightbulb, Rocket, Users } from "lucide-react"
 
 const highlights = [
     {
@@ -8,9 +8,19 @@ const highlights = [
     },
     {
         icon: Rocket,
-        title: 'Clean Code',
-        description: 'Foco em um código limpo, legível e de fácil manutenção, seguindo boas práticas de desenvolvimento.'
+        title: 'Aprendizado Contínuo',
+        description: 'Busco aprender constantemente novas tecnologias e boas práticas para evoluir como desenvolvedor.'
     },
+    {
+        icon: Users,
+        title: 'Trabalho em Equipe Colaborativo',
+        description: 'Valorizo a colaboração, a comunicação e a troca de conhecimentos para desenvolver soluções de forma eficiente e alcançar objetivos em conjunto.'
+    },
+    {
+    icon: Lightbulb,
+    title: 'Resolução de Problemas',
+    description: 'Busco compreender cada desafio antes de desenvolver soluções, utilizando a programação para atender às necessidades de forma prática e objetiva.'
+    }
 ]
 
 export const About = () => {
@@ -27,10 +37,10 @@ export const About = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground ">
-                            Building the future,
+                            Sempre em desenvolvimento,
                             <span className="font-serif italic font-normal text-white">
                                 {" "}
-                                one component at a time.
+                                construindo soluções.
                             </span>
                         </h2>
 
@@ -49,7 +59,11 @@ export const About = () => {
 
                         <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
                             <p className="text-lg font-medium italic text-foreground">
-                                "Sempre busco a aprender mais e dominar novos conhecimentos"
+                                "Desde o meu primeiro contato com a programação, busco aprimorar
+                                continuamente meus conhecimentos e desenvolver minhas habilidades como
+                                desenvolvedor de software. Ao longo da minha formação, desenvolvi diversos
+                                projetos práticos que fortaleceram minha base técnica e minha capacidade de
+                                resolver problemas."
                             </p>
                         </div>
                     </div>
@@ -57,10 +71,16 @@ export const About = () => {
                     {/* Right Column - Highlights */}
                     <div className="grid sm:grid-cols-2 gap-6">
                         {highlights.map((item, index) => (
-                            <div>
-                                <div>
-                                    <item.icon />
+                            <div 
+                            key={index} 
+                            className="glass p-6 rounded-2xl animate-fade-in"
+                            style={{animationDelay: `${(index + 1) * 100}ms`}}
+                        >
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                                    <item.icon className="w-6 h-6 text-primary" />
                                 </div>
+                                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                                <p className="text-sm text-muted-foreground">{item.description}</p>
                             </div>
                         ))}
                     </div>

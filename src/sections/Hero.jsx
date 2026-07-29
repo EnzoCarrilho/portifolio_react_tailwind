@@ -61,14 +61,15 @@ export const Hero = () => {
                         {/* Headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Transformando problemas 
+                                Transformando  
                                 <br /> 
-                                em <span className="text-primary glow-text">soluções</span> 
+                                <span className="text-primary glow-text">aprendizado</span> 
                                 <br />
-                                através da <span className="font-serif italic font-normal text-white">programação.</span>
+                                em <span className="font-serif italic font-normal text-white">experiência.</span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                                Olá me chamo Enzo Felix Carrilho - Desenvolvedor Full-Stack 
+                                Olá! Me chamo Enzo Felix Carrilho, desenvolvedor Full Stack em busca da minha primeira oportunidade no mercado. 
+                                Atuo em todas as camadas do desenvolvimento, com maior experiência em SQL, Node.js e React.js.
                             </p>
                         </div>
                         
